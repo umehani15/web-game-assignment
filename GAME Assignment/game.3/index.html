@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #003d99;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #333;
+}
+
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 10px;
+    margin: 20px auto;
+    width: max-content;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #00bcd4;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.card.matched {
+    background-color: #4caf50;
+    cursor: default;
+}
+
+.card.flipped {
+    background-color: #ffffff;
+    color: #00bcd4;
+    transform: rotateY(180deg);
+}
+
+#timer {
+    font-size: 20px;
+    margin: 20px 0;
+    color: #333;
+}
+</style>
+<body>
+    <h1>Memory Game</h1>
+    <p id="timer">Time Left: 60s</p>
+    <div id="gameBoard"></div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
